@@ -49,7 +49,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        {/* <div className="relative">
           <div className="rounded-xl border border-border bg-card p-5 font-mono text-sm shadow-2xl shadow-black/30">
             <div className="mb-4 flex items-center gap-1.5">
               <span className="size-3 rounded-full bg-destructive/70" />
@@ -67,7 +67,7 @@ export function Hero() {
               {'}'}
             </pre>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
