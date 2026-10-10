@@ -1,4 +1,4 @@
-import { Briefcase, ExternalLink } from 'lucide-react' // 👈 Import de ExternalLink
+import { Briefcase, ExternalLink } from 'lucide-react'
 import { experiences } from '../lib/portfolio-data'
 import { SectionHeading } from './section-heading'
 
@@ -11,7 +11,7 @@ export function Experience() {
         <div className="mt-12 space-y-6">
           {experiences.map((exp) => (
             <article
-              key={exp.company}
+              key={`${exp.company}-${exp.period}`}
               className="rounded-xl border border-border bg-card p-6 transition-colors hover:border-primary/50 md:p-8"
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
@@ -38,18 +38,21 @@ export function Experience() {
                 ))}
               </ul>
 
-              {/* 👈 C'est ici qu'on affiche le lien en bas si 'exp.link' existe */}
-              {exp.link && (
-                <div className="mt-6 md:pl-14">
-                  <a
-                    href={exp.link}
-                    target="_blank"             // Ouvre dans un nouvel onglet
-                    rel="noopener noreferrer"   // Sécurité importante pour les liens externes
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80 hover:underline"
-                  >
-                    Voir le projet
-                    <ExternalLink className="size-4" />
-                  </a>
+              {/* Liens affichés uniquement si 'links' existe et n'est pas vide */}
+              {exp.links && exp.links.length > 0 && (
+                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 md:pl-14">
+                  {exp.links.map((link) => (
+                    <a
+                      key={link.url}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80 hover:underline"
+                    >
+                      {link.label}
+                      <ExternalLink className="size-4" />
+                    </a>
+                  ))}
                 </div>
               )}
             </article>

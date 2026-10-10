@@ -31,35 +31,46 @@ export const skillGroups = [
 
 export const experiences = [
   {
-    company: 'ESPA — École Supérieure Polytechnique d\u2019Antananarivo',
-    role: 'Stage développeur — 4 mois',
-    period: 'Décembre 2025 – Mars 2026',
-    tasks: [
-      "Site vitrine de l'ESPA présentant les informations de l'école avec gestion des actualités et évènements.",
-      'Gestion de scolarité : module d\u2019inscription et gestion des notes des étudiants.',
-    ],
-  },
-  {
     company: 'Mesupres',
-    role: 'Projet — Gestion documentaire',
-    period: 'Projet',
-    tasks: ['Développement de la gestion des rapports Mesupres.'],
-    link: 'https://rapport.mesupres.mg' // 👈 Ajout du lien ici
+    role: 'Développeur FullStack — Symfony & Next.js',
+    period: 'Mars 2026 – Aujourd\u2019hui',
+    tasks: [
+      'Gestion des rapports : automatisation et centralisation des rapports hebdomadaires et trimestriels dans un système unique et structuré.',
+      'Export des rapports en PDF et Word, standardisation des formats, validation de chaque rapport et suivi des données en temps réel.',
+      'Réduction des tâches manuelles et des risques d\u2019erreurs, amélioration de la traçabilité et de la fiabilité des informations.',
+      'Gestion des courriers : réception, enregistrement et traitement des courriers entrants et sortants avec recherche multicritère.',
+      'Suivi des courriers par mail en temps réel et gestion des utilisateurs de la plateforme.',
+      'Mise en ligne des deux plateformes.',
+    ],
+    links: [
+      { label: 'Rapports', url: 'https://rapport.mesupres.mg' },
+      { label: 'Courriers', url: 'https://courrier.mesupres.mg' },
+    ],
   },
   {
-    company: "Projets d'étude",
-    role: 'Applications web & mobiles',
-    period: 'Cursus IT University',
+    company: 'ESPA — École Supérieure Polytechnique d\u2019Antananarivo',
+    role: 'Stagiaire développeur',
+    period: 'Octobre 2025 – Mars 2026',
     tasks: [
-      "Gestion d'emploi du temps pour un cabinet dentaire.",
-      "Gestion des employés via l'API ERPNext pour centraliser les informations de chaque employé.",
-      'Gestion des produits sur Dolibarr (stock, fabrication) en exploitant son API.',
-      'Plateforme de crypto-monnaies : achat/vente avec suivi des cours en temps réel et application mobile de consultation.',
+      'Site vitrine de l\u2019ESPA : conception de l\u2019interface et de l\u2019arborescence, développement des pages, intégration du contenu.',
+      'Navigation intuitive et responsive, affichage optimisé sur ordinateur et mobile.',
+      'Gestion de scolarité : inscriptions et réinscriptions, dossiers étudiants, écolages, notes, évaluations et relevés de résultats.',
+      'Suivi des parcours académiques, gestion des classes, formations et enseignements.',
+      'Export PDF de la fiche de présence par mention et niveau, automatisation et centralisation des données de scolarité.',
     ],
-    // Si tu ne mets pas de 'link' ici, le bouton ne s'affichera tout simplement pas !
+  },
+  {
+    company: 'IT University',
+    role: 'Licence en développement web',
+    period: '2025',
+    tasks: [
+      'Gestion d\u2019emploi du temps pour un cabinet dentaire.',
+      'Gestion des employés via l\u2019API ERPNext pour centraliser les informations de chaque employé.',
+      'Gestion des produits (stock, fabrication) sur Dolibarr via son API.',
+      'Plateforme de cryptomonnaies : achat/vente avec variation des cours et application mobile de consultation des cours.',
+    ],
   },
 ]
-
 export const education = [
   {
     title: 'Licence en développement web',

@@ -1,4 +1,3 @@
-import { SiteNav } from '../components/site-nav'
 import { Hero } from '../components/hero'
 import { About } from '../components/about'
 import { Skills } from '../components/skills'
